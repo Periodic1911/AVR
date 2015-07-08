@@ -47,13 +47,13 @@ void main() {
     // Set the sound pin as output
     DDRB |= _BV(PORTB1);
     
-    // Setup the ADC
+    // Set up the ADC
     // 8-bit precision, ADC1
     ADMUX  |= _BV(ADLAR) | _BV(MUX0);
     // F_ADC = 125kHz, free-running
     ADCSRA |= _BV(ADEN) | _BV(ADATE) | _BV(ADSC) | _BV(ADPS2) | _BV(ADPS1);
     
-    // Setup the timer
+    // Set up the timer
     // CTC Mode
     TCCR0A |= _BV(WGM01);
     // Frequency = 8000000/176 ~= 45kHz
